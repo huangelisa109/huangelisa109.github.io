@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>控制台連結</title>
+    <style>
+        /* 基本樣式與重設 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* 容器樣式 */
+        .container {
+            background-color: #ffffff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        /* 按鈕群組與響應式彈性排版 (RWD) */
+        .button-group {
+            display: flex;
+            flex-direction: column; /* 手機板預設垂直排列 */
+            gap: 15px;
+        }
+
+        /* 按鈕基本樣式 */
+        .btn {
+            display: inline-block;
+            padding: 14px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 個別按鈕顏色 */
+        .btn-sync {
+            background-color: #007bff; /* 藍色 */
+        }
+        .btn-sync:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-setting {
+            background-color: #28a745; /* 綠色 */
+        }
+        .btn-setting:hover {
+            background-color: #218838;
+        }
+
+        .btn-test {
+            background-color: #17a2b8; /* 青色 */
+        }
+        .btn-test:hover {
+            background-color: #138496;
+        }
+
+        /* 點擊效果 */
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        /* 響應式設計：當螢幕寬度大於 576px 時，按鈕改為水平排列 */
+        @media (min-width: 576px) {
+            .container {
+                max-width: 600px;
+            }
+            .button-group {
+                flex-direction: row; /* 寬螢幕水平排列 */
+                justify-content: space-between;
+            }
+            .btn {
+                flex: 1; /* 讓每個按鈕等寬 */
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>功能選單</h1>
+        <div class="button-group">
+            <a href="https://huangelisa109.app.n8n.cloud/form/c3270e39-d413-4335-b194-bb9a99e1ad0c" target="_blank" class="btn btn-sync">同步</a>
+            <a href="https://docs.google.com/spreadsheets/d/1zTbY_XyXR_xJVs39Ev2o5Ey2ojXveqkL33-dAjvroks/edit?usp=sharing" target="_blank" class="btn btn-setting">設定</a>
+            <a href="https://kentaitwds2.github.io/index.html" target="_blank" class="btn btn-test">測試</a>
+        </div>
+    </div>
+
+</body>
+</html>
